@@ -1,0 +1,48 @@
+.top-bar {
+    background-color: rgba(0, 0, 0, 0.8); /* Siyah ama opaklığı %70 */
+    color: white; /* Yazı rengi */
+    padding: 5px 20px; /* Barın iç kenar boşlukları */
+    margin-top: 20px; /* Barın yukarıdan boşluğu */
+    height: 60px; /* Sabit bir yükseklik */
+    display: flex; /* Flexbox kullanarak içeriği hizalama */
+    align-items: center; /* Dikey hizalama */
+}
+
+.topbar-content {
+    display: flex;
+    justify-content: space-between; /* İçeriği sağa ve sola yay */
+    align-items: center; /* Dikey hizalama */
+    width: 100%; /* Tam genişlik */
+}
+
+.topbar-logo {
+    display: flex; /* İkon ve yazıyı yatay olarak hizalamak için */
+    align-items: center; /* Dikey hizalama */
+}
+
+.topbar-icon {
+    margin-right: 8px; /* İkon ile yazı arasında boşluk */
+    width: 40px; /* İkonun genişliği */
+    height: 40px; /* İkonun yüksekliği */
+}
+
+.topbar-logo-text {
+    font-size: 18px; /* Logo metni boyutu */
+}
+
+.topbar-language-options {
+    font-size: 18px; /* Dil seçenekleri yazı boyutu */
+    margin-left: auto; /* Sağda yer alması için otomatik marj */
+    display: flex; /* Dil seçeneklerini yan yana hizalamak için */
+    align-items: center; /* Dikey hizalama */
+}
+
+.topbar-language {
+    color: white; /* Dil yazısı rengi */
+    margin-left: 10px; /* Dil seçenekleri arasında boşluk */
+}
+
+.topbar-title {
+    font-size: 40px; /* Başlık boyutu */
+    margin-top: 100px; /* Başlık üst boşluğu */
+}

@@ -36,3 +36,34 @@
     transform: rotate(360deg);
   }
 }
+
+/* App.css */
+body {
+  font-family: Arial, sans-serif;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+  padding: 10px;
+  background-color: #333;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  color: #333;
+}
+
+div {
+  padding: 20px;
+}
+
+

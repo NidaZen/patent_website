@@ -1,0 +1,98 @@
+
+
+/* Main Content */
+.s-curve-main-content {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* Search Bar */
+.s-curve-search-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #6a0dad;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.s-curve-search-icon {
+    color: #6a0dad;
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.s-curve-search-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+/* Title */
+.s-curve-title {
+    color: #6a0dad;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Chart Container */
+.s-curve-chart-container {
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.s-curve-chart {
+    flex: 1;
+    background-color: #e0e0e0;
+    height: 400px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.s-curve-chart-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Info Boxes */
+.s-curve-info-boxes {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.s-curve-info-box {
+    background-color: #6a0dad;
+    color: white;
+    width: 180px;
+    height: 150px;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.s-curve-info-box h2 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.s-curve-info-box p {
+    font-size: 24px;
+    margin: 10px 0 0;
+}

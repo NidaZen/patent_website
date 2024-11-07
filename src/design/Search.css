@@ -1,0 +1,94 @@
+/* Main Container */
+.search-container {
+    display: flex;
+    padding: 20px;
+    background-color: #1a0e34;
+    color: white;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Left Panel */
+.search-left {
+    width: 35%;
+    padding: 20px;
+}
+
+.logo {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+    color: #cfcfcf;
+}
+
+/* Search Box with SCurve Styling */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 300px;
+    overflow: hidden;
+}
+
+.search-input {
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #333;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #1a0e34;
+    color: white;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    margin-left: -10px;
+}
+
+/* Right Panel: Search Results */
+.search-results {
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.result-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #3a0ca3, #480ca8);
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.result-item:hover {
+    transform: scale(1.02);
+}
+
+.result-item span:last-child {
+    font-size: 16px;
+    opacity: 0.8;
+}

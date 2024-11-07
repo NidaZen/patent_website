@@ -1,0 +1,87 @@
+/* Container styling */
+.explanation-container {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #3e0066; /* Dark purple background */
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  color: #ffffff; /* White text color */
+}
+
+/* Header styling */
+.explanation-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
+
+.explanation-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.header-title {
+  text-align: center;
+  flex-grow: 1;
+}
+
+.explanation-header h2 {
+  font-size: 24px;
+  color: #ffffff; /* White color for header text */
+  margin: 0;
+}
+
+.language-switch {
+  font-size: 14px;
+  color: #aaaaaa; /* Light gray for language switch */
+  cursor: pointer;
+}
+
+/* Content styling */
+.explanation-content h1 {
+  font-size: 28px;
+  color: #ffffff; /* White color for main title */
+  margin-bottom: 16px;
+}
+
+.explanation-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e0e0e0; /* Light gray for paragraph text */
+  margin-bottom: 24px;
+}
+
+/* Relevancy score styling */
+.relevancy-score {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff; /* White color for relevancy score */
+  background-color: transparent;
+  border: 2px solid #ffffff; /* White border around relevancy score */
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+/* Patent codes styling */
+.patent-codes {
+  font-size: 14px;
+  color: #bbbbbb; /* Light gray for patent codes */
+  background-color: transparent;
+  text-align: center;
+  word-wrap: break-word; /* Wraps long strings to prevent overflow */
+  margin-top: 20px;
+}

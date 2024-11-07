@@ -1,0 +1,49 @@
+.home-container {
+    text-align: center;
+    position: relative; /* Yarım daire için konumlandırma */
+    min-height: 100vh; /* Sayfanın minimum yüksekliği */
+    background-image: url('../assets/back.jpg'); /* Arka plan resmi yolu */
+    background-size: cover; /* Arka planı kapsar */
+    background-position: center; /* Arka planı ortalar */
+    color: white; /* Yazı rengi */
+}
+
+
+.half-circle-container {
+    width: 100%; /* Tam genişlik */
+    height: 200px; /* Yükseklik */
+    background-color: rgba(0, 0, 0, 0.7); /* Siyah ama opaklığı %70 */
+    border-radius: 100% 100% 0 0; /* Yarım daire şekli ters çevrildi */
+    position: absolute; /* Sayfanın tabanına yerleştirmek için */
+    bottom: 0; /* Taban ile hizalama */
+    left: 0; /* Sol ile hizalama */
+    display: flex; /* İçerik ortalama */
+    justify-content: center; /* Yatay ortalama */
+    align-items: center; /* Dikey ortalama */
+}
+
+.home-description {
+    font-size: 18px; /* Açıklama yazı boyutu */
+    color: white; /* Yazı rengi */
+    text-align: center; /* Yazıyı ortala */
+}
+
+.home-button-container {
+    margin-top: 30px; /* Buton üst boşluğu */
+    display: flex; /* Butonları yan yana yerleştir */
+    justify-content: center; /* Yatay ortalama */
+}
+
+.home-nav-button {
+    margin: 0 10px; /* Butonlar arasındaki boşluk */
+    padding: 10px 20px; /* Buton iç kenar boşlukları */
+    font-size: 16px; /* Buton yazı boyutu */
+    background-color: rgba(255, 255, 255, 0.8); /* Buton arka plan rengi */
+    border: none; /* Kenarlık kaldırma */
+    border-radius: 5px; /* Kenar yuvarlama */
+    cursor: pointer; /* Fare imleci gösterimi */
+}
+
+.home-nav-button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Hover durumunda arka plan rengi */
+}
