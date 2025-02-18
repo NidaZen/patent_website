@@ -6,6 +6,11 @@ from elasticsearch import Elasticsearch
 from sentence_transformers import SentenceTransformer
 from collections import Counter
 import logging
+import numpy as np
+from scipy.optimize import curve_fit
+
+# Hata loglarını "error.log" dosyasına yazdır
+logging.basicConfig(filename="error.log", level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
 
 logging.basicConfig(level=logging.INFO)
 app = FastAPI()
@@ -15,21 +20,23 @@ origins = [
     "http://localhost:3000",
 ]
 
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=["*"],  # Gerekirse sadece "http://localhost:3000" ekle
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 redis_client = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True)
 
 def initialize_elasticsearch():
     try:
         es = Elasticsearch(
-            "http://localhost:9200",
-            basic_auth=("elastic", "WpJra7WT=knXso=Np-Bv"),
+            "http://44.210.142.78:9200",
+            basic_auth=("elastic", "J8JsA9*V-yw7fDNxm8uJ"),
             verify_certs=False,
             request_timeout=120
         )
@@ -118,3 +125,65 @@ def get_yearly_data_for_top_cpc_codes(search_query: str):
         yearly_data[cpc_code] = data["cumulative_years"] 
 
     return yearly_data
+
+# Lojistik büyüme fonksiyonu
+def logistic_growth(t, K, t_m, r):
+    return K / (1 + np.exp(-r * (t - t_m)))
+
+# FastAPI log seviyesini artır
+logging.basicConfig(level=logging.DEBUG)
+
+@app.get("/predict-s-curve")
+def predict_s_curve(cpc_code: str, search_query: str, future_years: int = 20):
+    try:
+        print(f"API request received with: cpc_code={cpc_code}, search_query={search_query}, future_years={future_years}")
+
+        # Geçmiş verileri getir
+        data = extract_yearly_cumulative_data(cpc_code, search_query)
+        cumulative_years = data.get("cumulative_years", [])
+
+        if not cumulative_years:
+            raise HTTPException(status_code=404, detail="No historical data found for prediction.")
+
+        # Yıl ve kümülatif veriyi ayır
+        years, counts = zip(*cumulative_years)
+        years = np.array(years, dtype=int)
+        counts = np.array(counts, dtype=int)
+
+        if len(years) < 3:
+            raise HTTPException(status_code=400, detail="Not enough data points for logistic curve fitting.")
+
+        # Eğriyi en iyi şekilde uydur
+        initial_guesses = [counts.max(), years.mean(), 0.1]
+        popt, _ = curve_fit(logistic_growth, years, counts, p0=initial_guesses, maxfev=20000, bounds=(0, [np.inf, np.inf, 1]))
+        K, t_m, r = popt  
+
+        # Gelecek yılları tahmin et
+        future_years_list = np.arange(years[-1] + 1, years[-1] + 1 + future_years, dtype=int)
+        future_counts = logistic_growth(future_years_list, K, t_m, r)
+
+        # 99% doygunluk seviyesini hesapla
+        saturation_99 = 0.99 * K
+        saturation_year = int(future_years_list[np.searchsorted(future_counts, saturation_99)])
+
+        future_predictions = list(zip(future_years_list.tolist(), future_counts.tolist()))
+
+        response_data = {
+            "cpc_code": cpc_code,
+            "historical_data": cumulative_years,
+            "future_predictions": future_predictions,
+            "logistic_parameters": {
+                "K": float(K),
+                "t_m": float(t_m),
+                "r": float(r)
+            },
+            "99_saturation_level": float(saturation_99),
+            "estimated_saturation_year": saturation_year
+        }
+
+        print("API Response:", response_data)
+        return response_data
+
+    except Exception as e:
+        print(f"Prediction error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Prediction error: {str(e)}")
