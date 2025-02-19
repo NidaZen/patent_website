@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi import APIRouter
 import redis
 import json
 from elasticsearch import Elasticsearch
@@ -8,6 +9,11 @@ from collections import Counter
 import logging
 import numpy as np
 from scipy.optimize import curve_fit
+import requests
+from bs4 import BeautifulSoup
+import re
+
+
 
 # Hata loglarını "error.log" dosyasına yazdır
 logging.basicConfig(filename="error.log", level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -186,4 +192,41 @@ def predict_s_curve(cpc_code: str, search_query: str, future_years: int = 20):
 
     except Exception as e:
         print(f"Prediction error: {str(e)}")
-        raise HTTPException(status_code=500, detail=f"Prediction error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Prediction error: {str(e)}")          
+    
+
+CPC_API_URL = "https://www.uspto.gov/web/patents/classification/cpc/html/cpc-{}.html"
+
+def fetch_cpc_title(cpc_code):
+    """
+    CPC kodunun başlığını çekip sadece büyük harfli kelimeleri döndürür.
+    """
+    try:
+        url = CPC_API_URL.format(cpc_code.replace("/", "-"))  
+        response = requests.get(url)
+
+        if response.status_code == 200:
+            soup = BeautifulSoup(response.text, "html.parser")
+            title_section = soup.find("div", class_="class-title")
+
+            if title_section:
+                full_title = title_section.get_text(strip=True)
+                capitalized_title = " ".join(re.findall(r'\b[A-Z]+\b', full_title))
+                return capitalized_title if capitalized_title else "Title not found"
+            else:
+                return "Title not found"
+        else:
+            return "CPC not found"
+
+    except Exception as e:
+        return f"Error fetching title: {e}"
+
+
+router = APIRouter()
+
+@router.get("/cpc-title/{cpc_code}")
+def get_cpc_title(cpc_code: str):
+    title = fetch_cpc_title(cpc_code)
+    return {"cpc_code": cpc_code, "title": title}
+
+app.include_router(router)
