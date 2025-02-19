@@ -7,6 +7,8 @@
   background-size: cover;
   background-position: center;
   color: white;
+  background-attachment: fixed; /* Arka planın sabit kalmasını sağlar */
+  background-repeat: no-repeat;
 }
 
 /* Üst Menü */
@@ -43,7 +45,11 @@
 }
 
 /* Arama Kutusu */
+/* Arama Kutusu */
 .search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 40px auto;
 }
 
@@ -53,8 +59,11 @@
   border: none;
   border-radius: 5px;
   font-size: 16px;
+  outline: none;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Arama Butonu */
 .search-button {
   padding: 10px 20px;
   margin-left: 10px;
@@ -64,62 +73,50 @@
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* İkon ve metin arası boşluk */
+  transition: background-color 0.3s ease-in-out, transform 0.1s ease-in-out;
 }
 
+/* Arama Butonu Hover */
+.search-button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Butondaki Search İkonu */
+.button-icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Arama Sırasında Buton Stili */
+.search-button.loading {
+  gap: 0; /* Aranırken boşluğu kaldır */
+  padding: 10px 20px;
+  background-color: #007bff;
+}
+
+/* Arama Butonu Devre Dışı */
 .search-button:disabled {
   background-color: #9e9e9e;
+  cursor: not-allowed;
 }
 
+.search-button:hover {
+  background-color: #333;
+}
+
+.search-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Hata Mesajı */
 .error-message {
   color: white;
   margin-top: 10px;
-}
-
-.cpc-codes {
-  margin-top: 20px;
-  margin-bottom: 60px;
-}
-
-.cpc-table {
-  width: 70%; 
-  margin: 20px auto;
-  border-collapse: collapse;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0px 6px 10px black;
-}
-
-.cpc-table th, .cpc-table td {
-  padding: 14px 50px;
-  text-align: center;
-  border: 1px solid #ddd;
-  font-size: 16px;
-  font-family: 'Arial', sans-serif;
-}
-
-.cpc-table th {
-  background-color: black;
-  color: white;
-  font-weight: bold;
-}
-
-.cpc-table td {
-  background-color: #f9f9f9;
-  color: #333;
-  border-radius: 5px;
-  font-weight: 500;
-}
-
-.cpc-table tr:nth-child(even) td {
-  background-color: #f2f2f2;
-}
-
-.cpc-table tr:hover {
-  background-color: #e0f7fa;
-}
-
-.cpc-table td {
-  transition: background-color 0.3s ease;
 }
 
 /* Grafik Alanı */
@@ -131,7 +128,7 @@
 
 .graph {
   margin: 20px;
-  width: 60%;  /* Grafik alanı genişliği azaltıldı */
+  width: 60%;
 }
 
 .graph-content {
@@ -139,4 +136,72 @@
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* CPC Başlık */
+.cpc-title {
+  cursor: pointer;
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.cpc-title:hover {
+  color: white;
+}
+
+/* SC-Curve Başlık */
+.sc-curve-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.sc-curve-subtitle {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Modal Penceresi */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  text-align: center;
+}
+
+.close-modal {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.scurve-title {
+  font-size: 28px;
+  font-family: 'Arial', sans-serif;
+  color: white;
+  text-align: center;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding-top: 20px;
+  margin-bottom: 20px;
 }

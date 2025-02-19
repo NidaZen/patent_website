@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../design/Home.css";
 import logo from "../assets/images.png";
+import { Search } from "lucide-react";  
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine } from "recharts";
 
 function Home() {
@@ -116,19 +117,23 @@ function Home() {
 
       <main className="content">
         <h1 className="content-title">Teknolojinin Geleceği Hakkında Bilgi Edinin</h1>
-
         <div className="search-box">
-          <input
-            type="text"
-            placeholder="Patent ara..."
-            className="search-input"
-            value={inputQuery}
-            onChange={(e) => setInputQuery(e.target.value)}
-          />
-          <button className="search-button" onClick={handleSearch} disabled={loading}>
-            {loading ? "Aranıyor" : "Ara"}
-          </button>
-        </div>
+        <input
+          type="text"
+          placeholder="Patent ara..."
+          className="search-input"
+          value={inputQuery}
+          onChange={(e) => setInputQuery(e.target.value)}
+        />
+        <button
+          className={`search-button ${loading ? "loading" : ""}`}
+          onClick={handleSearch}
+          disabled={loading}
+        >
+          {!loading && <Search className="button-icon" />}  
+          {loading ? "Aranıyor" : "Ara"}
+        </button>
+      </div>
 
         {error && <p className="error-message">{error}</p>}
 
@@ -136,7 +141,7 @@ function Home() {
         <div className="scurve-graphs">
           {Object.keys(sCurveData).length > 0 && (
             <div>
-              <h2>S-Curve Tahminleri:</h2>
+              <h2 class="scurve-title">S-Curve Tahminleri</h2>
               <div className="graphs-container">
                 {Object.entries(sCurveData).map(([cpcCode, data], index) => (
                   <div key={index} className="graph">
