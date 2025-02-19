@@ -9,8 +9,11 @@ function Home() {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
   const [cpcCodes, setCpcCodes] = useState([]);
+  const [cpcTitles, setCpcTitles] = useState({});
   const [sCurveData, setSCurveData] = useState({});
-  const [saturationLevels, setSaturationLevels] = useState([]);  // Array to store saturation levels and years
+  const [saturationLevels, setSaturationLevels] = useState([]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedCpcCode, setSelectedCpcCode] = useState(null);
 
   const fetchData = async (url) => {
     const response = await fetch(url, {
@@ -27,8 +30,9 @@ function Home() {
     setError("");
     setResults([]);
     setCpcCodes([]);
+    setCpcTitles({});
     setSCurveData({});
-    setSaturationLevels([]);  // Reset the saturation levels state
+    setSaturationLevels([]);
 
     if (inputQuery.trim() === "") {
       setError("Lütfen bir arama terimi girin.");
@@ -44,32 +48,37 @@ function Home() {
       const cpcData = await fetchData(`http://localhost:8000/top-cpc-codes?search_query=${inputQuery}`);
       setCpcCodes(cpcData);
 
-      const fetchSCurveData = async () => {
-        const scurvePromises = cpcData.slice(0, 5).map(async ([cpcCode]) => {
-          const data = await fetchData(`http://localhost:8000/predict-s-curve?search_query=${inputQuery}&cpc_code=${cpcCode}`);
-          return { cpcCode, data };
-        });
+      const titlePromises = cpcData.map(async ([cpcCode]) => {
+        const titleData = await fetchData(`http://localhost:8000/cpc-title/${cpcCode}`);
+        return { cpcCode, title: titleData.title };
+      });
 
-        const scurveResults = await Promise.all(scurvePromises);
-        const scurveData = {};
-        const saturationData = [];
+      const titleResults = await Promise.all(titlePromises);
+      const titleMap = {};
+      titleResults.forEach(({ cpcCode, title }) => {
+        titleMap[cpcCode] = title;
+      });
+      setCpcTitles(titleMap);
 
-        scurveResults.forEach(({ cpcCode, data }) => {
-          scurveData[cpcCode] = data;
+      const scurvePromises = cpcData.map(async ([cpcCode]) => {
+        const data = await fetchData(`http://localhost:8000/predict-s-curve?search_query=${inputQuery}&cpc_code=${cpcCode}`);
+        return { cpcCode, data };
+      });
 
-          // Store saturation level and saturation year for each cpcCode
-          saturationData.push({
-            cpcCode,
-            saturationLevel: data["99_saturation_level"],
-            saturationYear: data["estimated_saturation_year"],
-          });
-        });
+      const scurveResults = await Promise.all(scurvePromises);
+      const scurveData = {};
+      const saturationData = {};
 
-        setSCurveData(scurveData);
-        setSaturationLevels(saturationData);  // Set the saturation levels for all CPC codes
-      };
+      scurveResults.forEach(({ cpcCode, data }) => {
+        scurveData[cpcCode] = data;
+        saturationData[cpcCode] = {
+          saturationLevel: data["99_saturation_level"],
+          saturationYear: data["estimated_saturation_year"],
+        };
+      });
 
-      await fetchSCurveData();
+      setSCurveData(scurveData);
+      setSaturationLevels(saturationData);
       
     } catch (err) {
       setError(err.message);
@@ -79,9 +88,18 @@ function Home() {
     }
   };
 
+  const openModal = (cpcCode) => {
+    setSelectedCpcCode(cpcCode);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setSelectedCpcCode(null);
+    setModalOpen(false);
+  };
+
   const formatDataForChart = (historicalData, futurePredictions) => {
-    const combinedData = [...historicalData, ...futurePredictions];
-    return combinedData.map(item => ({
+    return [...historicalData, ...futurePredictions].map(item => ({
       year: item[0],
       value: item[1]
     }));
@@ -108,60 +126,27 @@ function Home() {
             onChange={(e) => setInputQuery(e.target.value)}
           />
           <button className="search-button" onClick={handleSearch} disabled={loading}>
-            {loading ? "Aranıyor..." : "Ara"}
+            {loading ? "Aranıyor" : "Ara"}
           </button>
         </div>
 
         {error && <p className="error-message">{error}</p>}
 
-        {/* Arama sonuçları */}
-        <div className="api-results">
-          {results.length > 0 && (
-            <div>
-              <h2>Arama Sonuçları:</h2>
-              <ul>
-                {results.map((result, index) => (
-                  <li key={index}>{JSON.stringify(result)}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-        </div>
-
-        {/* CPC Kodları */}
-        <div className="cpc-codes">
-          {cpcCodes.length > 0 && (
-            <div>
-              <h2>En Çok Kullanılan CPC Kodları:</h2>
-              <table className="cpc-table">
-                <thead>
-                  <tr>
-                    <th>CPC Kodu</th>
-                    <th>Kullanım Sayısı</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {cpcCodes.map(([cpcCode, count], index) => (
-                    <tr key={index}>
-                      <td>{cpcCode}</td>
-                      <td>{count}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          )}
-        </div>
-
-        {/* S-Curve Verileri ve Grafikler */}
+        {/* S-Curve Grafikler */}
         <div className="scurve-graphs">
           {Object.keys(sCurveData).length > 0 && (
             <div>
-              <h2>Gelecekle İlgili Tahmin Grafikleri:</h2>
+              <h2>S-Curve Tahminleri:</h2>
               <div className="graphs-container">
                 {Object.entries(sCurveData).map(([cpcCode, data], index) => (
                   <div key={index} className="graph">
-                    <h3>{cpcCode}</h3>
+                    <h3 
+                      onClick={() => openModal(cpcCode)} 
+                      className="cpc-title"
+                    >
+                      {cpcCode}
+                    </h3>
+
                     <div className="graph-content">
                       <ResponsiveContainer width="100%" height={400}>
                         <LineChart data={formatDataForChart(data.historical_data, data.future_predictions)}>
@@ -171,38 +156,10 @@ function Home() {
                           <Tooltip />
                           <Legend />
                           <Line type="monotone" dataKey="value" stroke="#8884d8" activeDot={{ r: 8 }} />
-
-                          {/* Yatay Çizgi (99% Saturation Level) */}
-                          <ReferenceLine 
-                            y={data["99_saturation_level"]} 
-                            stroke="red" 
-                            strokeDasharray="3 3" 
-                            strokeWidth={3} 
-                          />
-
-                          {/* Dikey Çizgi (Estimated Saturation Year) */}
-                          <ReferenceLine 
-                            x={data["estimated_saturation_year"]} 
-                            stroke="green" 
-                            strokeDasharray="3 3" 
-                            strokeWidth={3} 
-                          />
+                          <ReferenceLine y={data["99_saturation_level"]} stroke="red" strokeDasharray="3 3" strokeWidth={3} />
+                          <ReferenceLine x={data["estimated_saturation_year"]} stroke="green" strokeDasharray="3 3" strokeWidth={3} />
                         </LineChart>
                       </ResponsiveContainer>
-                    </div>
-
-                    {/* 99% Saturation Level ve Estimated Saturation Year Bilgisi */}
-                    <div style={{
-                      backgroundColor: 'rgba(0, 0, 0, 0.6)',  // Opaklık ayarlandı
-                      color: 'white',
-                      padding: '10px',
-                      marginTop: '10px',
-                      textAlign: 'center',
-                      display: 'inline-block',  // Yazıya uyumlu genişlik
-                    }}>
-                      <p><strong>B64C:</strong></p>
-                      <p>99% Saturation Level: {data["99_saturation_level"]}</p>
-                      <p>Estimated Saturation Year: {data["estimated_saturation_year"]}</p>
                     </div>
                   </div>
                 ))}
@@ -210,6 +167,17 @@ function Home() {
             </div>
           )}
         </div>
+
+        {/* Popup Modal */}
+        {modalOpen && (
+          <div className="modal-overlay" onClick={closeModal}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <h2>{selectedCpcCode}</h2>
+              <p>{cpcTitles[selectedCpcCode] || "Açıklama yükleniyor..."}</p>
+              <button onClick={closeModal} className="close-modal">Kapat</button>
+            </div>
+          </div>
+        )}
       </main>
     </div>
   );
