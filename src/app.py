@@ -12,8 +12,10 @@ from scipy.optimize import curve_fit
 import requests
 from bs4 import BeautifulSoup
 import re
+from dotenv import load_dotenv
+import os
 
-
+load_dotenv()
 
 # Hata loglarını "error.log" dosyasına yazdır
 logging.basicConfig(filename="error.log", level=logging.DEBUG, format="%(asctime)s - %(levelname)s - %(message)s")
@@ -35,14 +37,14 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-redis_client = redis.Redis(host="localhost", port=6379, db=0, decode_responses=True)
+redis_client = redis.Redis(host=os.getenv("REDIS_HOST"),port=int(os.getenv("REDIS_PORT")),db=int(os.getenv("REDIS_DB")),decode_responses=True
+)
 
 def initialize_elasticsearch():
     try:
         es = Elasticsearch(
-            "http://44.210.142.78:9200",
-            basic_auth=("elastic", "J8JsA9*V-yw7fDNxm8uJ"),
+            os.getenv("ELASTICSEARCH_URL"),
+            basic_auth=(os.getenv("ELASTICSEARCH_USER"), os.getenv("ELASTICSEARCH_PASSWORD")),
             verify_certs=False,
             request_timeout=120
         )

@@ -1,0 +1,617 @@
+2025-03-07 10:32:23,077 - INFO - Use pytorch device_name: cpu
+2025-03-07 10:32:23,078 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-07 10:32:23,086 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-07 10:32:24,172 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-07 10:32:24,362 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-07 10:32:24,536 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-07 10:32:24,712 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-07 10:32:24,878 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-07 10:32:25,050 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-07 10:32:26,311 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-07 10:32:26,676 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-07 10:32:26,991 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-07 10:32:28,526 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-07 10:32:29,419 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-07 10:32:29,419 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.893s]
+2025-03-07 10:32:46,825 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-07 10:32:46,825 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:17.406s]
+2025-03-07 10:32:50,358 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 10:32:50,361 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 10:32:50,666 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 10:32:50,670 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 10:32:50,671 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 10:32:52,047 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-07 10:32:52,094 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-07 10:32:52,125 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G08G.html HTTP/1.1" 200 17295
+2025-03-07 10:32:52,126 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G05D.html HTTP/1.1" 200 41059
+2025-03-07 10:32:52,218 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-07 10:32:56,427 - INFO - Cumulative data for CPC code B64D: [(2005, 81), (2006, 164), (2007, 248), (2008, 345), (2009, 474), (2010, 653), (2011, 800), (2012, 960), (2013, 1101), (2014, 1264), (2015, 1468), (2016, 1748), (2017, 1867), (2018, 1885)]
+2025-03-07 10:32:56,501 - INFO - Cumulative data for CPC code G08G: [(2005, 40), (2006, 75), (2007, 149), (2008, 233), (2009, 301), (2010, 423), (2011, 513), (2012, 594), (2013, 672), (2014, 735), (2015, 808), (2016, 949), (2017, 1019), (2018, 1027)]
+2025-03-07 10:32:56,569 - INFO - Cumulative data for CPC code G05D: [(2005, 38), (2006, 69), (2007, 129), (2008, 199), (2009, 263), (2010, 355), (2011, 441), (2012, 525), (2013, 575), (2014, 601), (2015, 693), (2016, 855), (2017, 945), (2018, 958)]
+2025-03-07 10:32:56,624 - INFO - Cumulative data for CPC code G01S: [(2005, 53), (2006, 112), (2007, 195), (2008, 290), (2009, 386), (2010, 488), (2011, 601), (2012, 698), (2013, 779), (2014, 859), (2015, 952), (2016, 1042), (2017, 1086), (2018, 1091)]
+2025-03-07 10:32:56,691 - INFO - Cumulative data for CPC code B64C: [(2005, 90), (2006, 186), (2007, 275), (2008, 382), (2009, 521), (2010, 711), (2011, 893), (2012, 1100), (2013, 1282), (2014, 1486), (2015, 1749), (2016, 2109), (2017, 2270), (2018, 2288)]
+2025-03-07 15:32:21,648 - INFO - Use pytorch device_name: cpu
+2025-03-07 15:32:21,648 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-07 15:32:21,651 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-07 15:33:01,920 - DEBUG - Starting new HTTPS connection (2): huggingface.co:443
+2025-03-07 15:33:04,671 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-07 15:33:04,895 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-07 15:33:05,123 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-07 15:33:05,309 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-07 15:33:05,496 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-07 15:33:05,869 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-07 15:33:06,269 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-07 15:33:06,463 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-07 15:33:08,176 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-07 15:33:08,653 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-07 15:33:08,653 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.477s]
+2025-03-07 15:33:14,063 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-07 15:33:14,064 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:5.410s]
+2025-03-07 15:34:17,476 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:34:17,774 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:34:17,775 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:34:17,779 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:34:17,780 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:34:19,064 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-07 15:34:19,202 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G05D.html HTTP/1.1" 200 41059
+2025-03-07 15:34:19,264 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-07 15:34:19,295 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G08G.html HTTP/1.1" 200 17295
+2025-03-07 15:34:19,372 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-07 15:34:23,292 - INFO - Cumulative data for CPC code B64C: [(2005, 90), (2006, 186), (2007, 275), (2008, 382), (2009, 521), (2010, 711), (2011, 893), (2012, 1100), (2013, 1282), (2014, 1486), (2015, 1749), (2016, 2109), (2017, 2270), (2018, 2288)]
+2025-03-07 15:34:23,387 - INFO - Cumulative data for CPC code G01S: [(2005, 53), (2006, 112), (2007, 195), (2008, 290), (2009, 386), (2010, 488), (2011, 601), (2012, 698), (2013, 779), (2014, 859), (2015, 952), (2016, 1042), (2017, 1086), (2018, 1091)]
+2025-03-07 15:34:23,397 - INFO - Cumulative data for CPC code B64D: [(2005, 81), (2006, 164), (2007, 248), (2008, 345), (2009, 474), (2010, 653), (2011, 800), (2012, 960), (2013, 1101), (2014, 1264), (2015, 1468), (2016, 1748), (2017, 1867), (2018, 1885)]
+2025-03-07 15:34:23,471 - INFO - Cumulative data for CPC code G05D: [(2005, 38), (2006, 69), (2007, 129), (2008, 199), (2009, 263), (2010, 355), (2011, 441), (2012, 525), (2013, 575), (2014, 601), (2015, 693), (2016, 855), (2017, 945), (2018, 958)]
+2025-03-07 15:34:23,525 - INFO - Cumulative data for CPC code G08G: [(2005, 40), (2006, 75), (2007, 149), (2008, 233), (2009, 301), (2010, 423), (2011, 513), (2012, 594), (2013, 672), (2014, 735), (2015, 808), (2016, 949), (2017, 1019), (2018, 1027)]
+2025-03-07 15:35:55,324 - INFO - Use pytorch device_name: cpu
+2025-03-07 15:35:55,324 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-07 15:35:55,492 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-07 15:35:55,687 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-07 15:35:55,856 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-07 15:35:56,107 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-07 15:35:56,276 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-07 15:35:56,446 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-07 15:35:56,755 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-07 15:35:57,022 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-07 15:35:57,204 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-07 15:35:57,390 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-07 15:35:57,729 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-07 15:35:57,729 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.339s]
+2025-03-07 15:36:03,179 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-07 15:36:03,180 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:5.449s]
+2025-03-07 15:36:18,132 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:36:18,134 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:36:18,442 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:36:18,443 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:36:18,444 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:36:19,487 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-07 15:36:19,507 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-07 15:36:19,736 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G05D.html HTTP/1.1" 200 41059
+2025-03-07 15:36:19,813 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G08G.html HTTP/1.1" 200 17295
+2025-03-07 15:36:20,312 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y02T.html HTTP/1.1" 200 9590
+2025-03-07 15:36:22,147 - INFO - Cumulative data for CPC code B64C: [(2005, 93), (2006, 196), (2007, 288), (2008, 422), (2009, 609), (2010, 848), (2011, 1080), (2012, 1300), (2013, 1507), (2014, 1734), (2015, 2000), (2016, 2354), (2017, 2503), (2018, 2518)]
+2025-03-07 15:36:22,206 - INFO - Cumulative data for CPC code G08G: [(2005, 31), (2006, 56), (2007, 115), (2008, 183), (2009, 234), (2010, 340), (2011, 421), (2012, 493), (2013, 562), (2014, 629), (2015, 700), (2016, 836), (2017, 893), (2018, 899)]
+2025-03-07 15:36:22,322 - INFO - Cumulative data for CPC code G05D: [(2005, 25), (2006, 47), (2007, 92), (2008, 152), (2009, 202), (2010, 283), (2011, 354), (2012, 410), (2013, 448), (2014, 463), (2015, 529), (2016, 656), (2017, 730), (2018, 739)]
+2025-03-07 15:36:22,369 - INFO - Cumulative data for CPC code B64D: [(2005, 152), (2006, 312), (2007, 457), (2008, 647), (2009, 851), (2010, 1140), (2011, 1405), (2012, 1693), (2013, 1934), (2014, 2198), (2015, 2508), (2016, 2873), (2017, 3014), (2018, 3031)]
+2025-03-07 15:36:22,383 - INFO - Cumulative data for CPC code Y02T: [(2005, 65), (2006, 134), (2007, 191), (2008, 294), (2009, 432), (2010, 606), (2011, 773), (2012, 945), (2013, 1013), (2014, 1023), (2017, 1025)]
+2025-03-07 15:40:40,724 - INFO - Use pytorch device_name: cpu
+2025-03-07 15:40:40,725 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-07 15:40:40,727 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-07 15:40:41,809 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-07 15:40:41,982 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-07 15:40:42,190 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-07 15:40:42,366 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-07 15:40:42,539 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-07 15:40:42,742 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-07 15:40:43,024 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-07 15:40:43,307 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-07 15:40:43,491 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-07 15:40:43,686 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-07 15:40:44,010 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-07 15:40:44,011 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.325s]
+2025-03-07 15:40:48,382 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-07 15:40:48,382 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:4.369s]
+2025-03-07 15:42:18,101 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:42:18,407 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:42:18,412 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:42:18,413 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:42:18,413 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:42:19,368 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-07 15:42:19,765 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-07 15:42:19,826 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y02T.html HTTP/1.1" 200 9590
+2025-03-07 15:42:19,949 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B41J.html HTTP/1.1" 200 53757
+2025-03-07 15:42:20,134 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-C09D.html HTTP/1.1" 200 30940
+2025-03-07 15:42:23,230 - INFO - Cumulative data for CPC code C09D: [(2005, 96), (2006, 200), (2007, 289), (2008, 370), (2009, 433), (2010, 519), (2011, 579), (2012, 690), (2013, 770), (2014, 829), (2015, 901), (2016, 960), (2017, 981)]
+2025-03-07 15:42:23,286 - INFO - Cumulative data for CPC code Y02T: [(2005, 56), (2006, 104), (2007, 167), (2008, 271), (2009, 407), (2010, 569), (2011, 706), (2012, 845), (2013, 892), (2014, 898), (2017, 900)]
+2025-03-07 15:42:23,346 - INFO - Cumulative data for CPC code B41J: [(2005, 276), (2006, 554), (2007, 821), (2008, 1041), (2009, 1222), (2010, 1390), (2011, 1537), (2012, 1709), (2013, 1914), (2014, 2097), (2015, 2282), (2016, 2410), (2017, 2476), (2018, 2477)]
+2025-03-07 15:42:23,446 - INFO - Cumulative data for CPC code B64C: [(2005, 60), (2006, 124), (2007, 189), (2008, 275), (2009, 398), (2010, 555), (2011, 703), (2012, 849), (2013, 973), (2014, 1111), (2015, 1264), (2016, 1446), (2017, 1521), (2018, 1526)]
+2025-03-07 15:42:23,457 - INFO - Cumulative data for CPC code B64D: [(2005, 85), (2006, 159), (2007, 243), (2008, 359), (2009, 484), (2010, 688), (2011, 866), (2012, 1041), (2013, 1184), (2014, 1335), (2015, 1499), (2016, 1695), (2017, 1767), (2018, 1776)]
+2025-03-07 15:43:30,436 - INFO - Use pytorch device_name: cpu
+2025-03-07 15:43:30,436 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-07 15:43:30,438 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-07 15:43:31,454 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-07 15:43:31,626 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-07 15:43:31,792 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-07 15:43:31,956 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-07 15:43:32,139 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-07 15:43:32,306 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-07 15:43:32,588 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-07 15:43:32,970 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-07 15:43:33,142 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-07 15:43:33,328 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-07 15:43:33,659 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-07 15:43:33,660 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.332s]
+2025-03-07 15:43:37,446 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-07 15:43:37,446 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:3.785s]
+2025-03-07 15:44:18,168 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:44:18,169 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:44:18,464 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:44:18,466 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:44:18,466 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-07 15:44:20,576 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G08G.html HTTP/1.1" 200 17295
+2025-03-07 15:44:20,611 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-07 15:44:21,249 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01C.html HTTP/1.1" 200 23914
+2025-03-07 15:44:21,250 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-H04L.html HTTP/1.1" 200 None
+2025-03-07 15:44:21,251 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-H04B.html HTTP/1.1" 200 53359
+2025-03-07 15:44:28,850 - INFO - Cumulative data for CPC code G01S: [(2005, 133), (2006, 337), (2007, 547), (2008, 799), (2009, 1065), (2010, 1389), (2011, 1683), (2012, 1953), (2013, 2166), (2014, 2380), (2015, 2608), (2016, 2782), (2017, 2841), (2018, 2846)]
+2025-03-07 15:44:28,923 - INFO - Cumulative data for CPC code H04L: [(2005, 54), (2006, 135), (2007, 211), (2008, 309), (2009, 383), (2010, 492), (2011, 585), (2012, 694), (2013, 777), (2014, 856), (2015, 962), (2016, 1070), (2017, 1111), (2018, 1116)]
+2025-03-07 15:44:28,988 - INFO - Cumulative data for CPC code G01C: [(2005, 79), (2006, 170), (2007, 276), (2008, 393), (2009, 482), (2010, 609), (2011, 734), (2012, 864), (2013, 953), (2014, 1057), (2015, 1167), (2016, 1271), (2017, 1307), (2018, 1310)]
+2025-03-07 15:44:29,042 - INFO - Cumulative data for CPC code G08G: [(2005, 53), (2006, 92), (2007, 166), (2008, 241), (2009, 313), (2010, 410), (2011, 489), (2012, 559), (2013, 621), (2014, 662), (2015, 709), (2016, 789), (2017, 831), (2018, 833)]
+2025-03-07 15:44:29,121 - INFO - Cumulative data for CPC code H04B: [(2005, 48), (2006, 110), (2007, 170), (2008, 243), (2009, 320), (2010, 394), (2011, 458), (2012, 529), (2013, 590), (2014, 641), (2015, 708), (2016, 772), (2017, 809), (2018, 814)]
+2025-03-08 00:23:47,168 - INFO - Use pytorch device_name: cpu
+2025-03-08 00:23:47,168 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-08 00:23:47,176 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-08 00:23:48,457 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 00:23:48,675 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-08 00:23:48,886 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-08 00:23:49,111 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 00:23:49,323 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-08 00:23:49,540 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-08 00:23:50,863 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-08 00:23:51,291 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-08 00:23:51,511 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-08 00:23:52,974 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-08 00:23:53,391 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-08 00:23:53,391 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.418s]
+2025-03-08 00:24:06,371 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-08 00:24:06,372 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:12.978s]
+2025-03-08 00:24:46,751 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:24:46,751 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:24:47,047 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:24:47,051 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:24:47,053 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:24:48,633 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-08 00:24:48,675 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-08 00:24:48,792 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G05D.html HTTP/1.1" 200 41059
+2025-03-08 00:24:48,824 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-08 00:24:48,963 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G08G.html HTTP/1.1" 200 17295
+2025-03-08 00:24:53,658 - INFO - Cumulative data for CPC code G08G: [(2005, 40), (2006, 75), (2007, 149), (2008, 233), (2009, 301), (2010, 423), (2011, 513), (2012, 594), (2013, 672), (2014, 735), (2015, 808), (2016, 949), (2017, 1019), (2018, 1027)]
+2025-03-08 00:24:53,805 - INFO - Cumulative data for CPC code B64C: [(2005, 90), (2006, 186), (2007, 275), (2008, 382), (2009, 521), (2010, 711), (2011, 893), (2012, 1100), (2013, 1282), (2014, 1486), (2015, 1749), (2016, 2109), (2017, 2270), (2018, 2288)]
+2025-03-08 00:24:53,810 - INFO - Cumulative data for CPC code B64D: [(2005, 81), (2006, 164), (2007, 248), (2008, 345), (2009, 474), (2010, 653), (2011, 800), (2012, 960), (2013, 1101), (2014, 1264), (2015, 1468), (2016, 1748), (2017, 1867), (2018, 1885)]
+2025-03-08 00:24:53,866 - INFO - Cumulative data for CPC code G05D: [(2005, 38), (2006, 69), (2007, 129), (2008, 199), (2009, 263), (2010, 355), (2011, 441), (2012, 525), (2013, 575), (2014, 601), (2015, 693), (2016, 855), (2017, 945), (2018, 958)]
+2025-03-08 00:24:53,945 - INFO - Cumulative data for CPC code G01S: [(2005, 53), (2006, 112), (2007, 195), (2008, 290), (2009, 386), (2010, 488), (2011, 601), (2012, 698), (2013, 779), (2014, 859), (2015, 952), (2016, 1042), (2017, 1086), (2018, 1091)]
+2025-03-08 00:28:49,644 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:28:49,646 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:28:49,962 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:28:49,963 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:28:49,965 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:28:51,098 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-08 00:28:51,289 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-08 00:28:51,319 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G05D.html HTTP/1.1" 200 41059
+2025-03-08 00:28:51,320 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G08G.html HTTP/1.1" 200 17295
+2025-03-08 00:28:51,321 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-08 00:28:56,138 - INFO - Cumulative data for CPC code B64C: [(2005, 90), (2006, 186), (2007, 275), (2008, 382), (2009, 521), (2010, 711), (2011, 893), (2012, 1100), (2013, 1282), (2014, 1486), (2015, 1749), (2016, 2109), (2017, 2270), (2018, 2288)]
+2025-03-08 00:28:56,235 - INFO - Cumulative data for CPC code G05D: [(2005, 38), (2006, 69), (2007, 129), (2008, 199), (2009, 263), (2010, 355), (2011, 441), (2012, 525), (2013, 575), (2014, 601), (2015, 693), (2016, 855), (2017, 945), (2018, 958)]
+2025-03-08 00:28:56,242 - INFO - Cumulative data for CPC code G08G: [(2005, 40), (2006, 75), (2007, 149), (2008, 233), (2009, 301), (2010, 423), (2011, 513), (2012, 594), (2013, 672), (2014, 735), (2015, 808), (2016, 949), (2017, 1019), (2018, 1027)]
+2025-03-08 00:28:56,353 - INFO - Cumulative data for CPC code G01S: [(2005, 53), (2006, 112), (2007, 195), (2008, 290), (2009, 386), (2010, 488), (2011, 601), (2012, 698), (2013, 779), (2014, 859), (2015, 952), (2016, 1042), (2017, 1086), (2018, 1091)]
+2025-03-08 00:28:56,377 - INFO - Cumulative data for CPC code B64D: [(2005, 81), (2006, 164), (2007, 248), (2008, 345), (2009, 474), (2010, 653), (2011, 800), (2012, 960), (2013, 1101), (2014, 1264), (2015, 1468), (2016, 1748), (2017, 1867), (2018, 1885)]
+2025-03-08 00:30:12,390 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:30:12,391 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:30:12,700 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:30:12,703 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:30:12,704 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:30:14,041 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G08G.html HTTP/1.1" 200 17295
+2025-03-08 00:30:14,058 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-08 00:30:14,086 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-08 00:30:14,088 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G05D.html HTTP/1.1" 200 41059
+2025-03-08 00:30:14,242 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-08 00:30:18,941 - INFO - Cumulative data for CPC code G01S: [(2005, 53), (2006, 112), (2007, 195), (2008, 290), (2009, 386), (2010, 488), (2011, 601), (2012, 698), (2013, 779), (2014, 859), (2015, 952), (2016, 1042), (2017, 1086), (2018, 1091)]
+2025-03-08 00:30:18,948 - INFO - Cumulative data for CPC code B64C: [(2005, 90), (2006, 186), (2007, 275), (2008, 382), (2009, 521), (2010, 711), (2011, 893), (2012, 1100), (2013, 1282), (2014, 1486), (2015, 1749), (2016, 2109), (2017, 2270), (2018, 2288)]
+2025-03-08 00:30:19,054 - INFO - Cumulative data for CPC code B64D: [(2005, 81), (2006, 164), (2007, 248), (2008, 345), (2009, 474), (2010, 653), (2011, 800), (2012, 960), (2013, 1101), (2014, 1264), (2015, 1468), (2016, 1748), (2017, 1867), (2018, 1885)]
+2025-03-08 00:30:19,121 - INFO - Cumulative data for CPC code G08G: [(2005, 40), (2006, 75), (2007, 149), (2008, 233), (2009, 301), (2010, 423), (2011, 513), (2012, 594), (2013, 672), (2014, 735), (2015, 808), (2016, 949), (2017, 1019), (2018, 1027)]
+2025-03-08 00:30:19,187 - INFO - Cumulative data for CPC code G05D: [(2005, 38), (2006, 69), (2007, 129), (2008, 199), (2009, 263), (2010, 355), (2011, 441), (2012, 525), (2013, 575), (2014, 601), (2015, 693), (2016, 855), (2017, 945), (2018, 958)]
+2025-03-08 00:42:58,646 - INFO - Use pytorch device_name: cpu
+2025-03-08 00:42:58,647 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-08 00:42:58,650 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-08 00:42:59,778 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 00:42:59,950 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-08 00:43:00,121 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-08 00:43:00,292 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 00:43:00,456 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-08 00:43:00,633 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-08 00:43:02,130 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-08 00:43:02,421 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-08 00:43:02,608 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-08 00:43:02,869 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-08 00:43:03,200 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-08 00:43:03,201 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.331s]
+2025-03-08 00:43:08,682 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-08 00:43:08,682 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:5.480s]
+2025-03-08 00:43:11,838 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:43:11,842 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:43:12,127 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:43:12,147 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:43:12,161 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 00:43:13,551 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-08 00:43:13,751 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y10T.html HTTP/1.1" 200 None
+2025-03-08 00:43:13,875 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-08 00:43:13,952 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y02T.html HTTP/1.1" 200 9590
+2025-03-08 00:43:13,984 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-08 00:43:29,603 - INFO - Cumulative data for CPC code B64C: [(2005, 57), (2006, 120), (2007, 185), (2008, 259), (2009, 369), (2010, 491), (2011, 605), (2012, 723), (2013, 855), (2014, 970), (2015, 1136), (2016, 1317), (2017, 1412), (2018, 1419)]
+2025-03-08 00:43:29,681 - INFO - Cumulative data for CPC code G01S: [(2005, 84), (2006, 203), (2007, 315), (2008, 430), (2009, 562), (2010, 682), (2011, 802), (2012, 927), (2013, 1022), (2014, 1128), (2015, 1249), (2016, 1352), (2017, 1389), (2018, 1394)]
+2025-03-08 00:43:29,758 - INFO - Cumulative data for CPC code B64D: [(2005, 70), (2006, 145), (2007, 222), (2008, 300), (2009, 381), (2010, 466), (2011, 568), (2012, 661), (2013, 748), (2014, 849), (2015, 986), (2016, 1136), (2017, 1207), (2018, 1213)]
+2025-03-08 00:43:29,839 - INFO - Cumulative data for CPC code Y10T: [(2005, 64), (2006, 150), (2007, 222), (2008, 290), (2009, 393), (2010, 504), (2011, 602), (2012, 715), (2013, 745), (2014, 748)]
+2025-03-08 00:43:29,913 - INFO - Cumulative data for CPC code Y02T: [(2005, 43), (2006, 92), (2007, 141), (2008, 206), (2009, 291), (2010, 371), (2011, 451), (2012, 531), (2013, 564), (2014, 567), (2017, 570)]
+2025-03-08 23:28:31,143 - INFO - Use pytorch device_name: cpu
+2025-03-08 23:28:31,143 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-08 23:28:31,152 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-08 23:28:32,352 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 23:28:32,543 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-08 23:28:32,728 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-08 23:28:32,945 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 23:28:33,128 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-08 23:28:33,328 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-08 23:28:34,627 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-08 23:28:35,074 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-08 23:28:35,273 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-08 23:28:36,762 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-08 23:28:37,198 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-08 23:28:37,198 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.436s]
+2025-03-08 23:28:48,938 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-08 23:28:48,938 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:11.738s]
+2025-03-08 23:28:52,394 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:28:52,395 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:28:52,699 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:28:52,702 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:28:52,704 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:28:54,273 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G08G.html HTTP/1.1" 200 17295
+2025-03-08 23:28:54,453 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-08 23:28:54,500 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-08 23:28:54,592 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-08 23:28:54,593 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G05D.html HTTP/1.1" 200 41059
+2025-03-08 23:28:58,875 - INFO - Cumulative data for CPC code B64C: [(2005, 90), (2006, 186), (2007, 275), (2008, 382), (2009, 521), (2010, 711), (2011, 893), (2012, 1100), (2013, 1282), (2014, 1486), (2015, 1749), (2016, 2109), (2017, 2270), (2018, 2288)]
+2025-03-08 23:28:58,969 - INFO - Cumulative data for CPC code G05D: [(2005, 38), (2006, 69), (2007, 129), (2008, 199), (2009, 263), (2010, 355), (2011, 441), (2012, 525), (2013, 575), (2014, 601), (2015, 693), (2016, 855), (2017, 945), (2018, 958)]
+2025-03-08 23:28:59,067 - INFO - Cumulative data for CPC code G01S: [(2005, 53), (2006, 112), (2007, 195), (2008, 290), (2009, 386), (2010, 488), (2011, 601), (2012, 698), (2013, 779), (2014, 859), (2015, 952), (2016, 1042), (2017, 1086), (2018, 1091)]
+2025-03-08 23:28:59,081 - INFO - Cumulative data for CPC code B64D: [(2005, 81), (2006, 164), (2007, 248), (2008, 345), (2009, 474), (2010, 653), (2011, 800), (2012, 960), (2013, 1101), (2014, 1264), (2015, 1468), (2016, 1748), (2017, 1867), (2018, 1885)]
+2025-03-08 23:28:59,147 - INFO - Cumulative data for CPC code G08G: [(2005, 40), (2006, 75), (2007, 149), (2008, 233), (2009, 301), (2010, 423), (2011, 513), (2012, 594), (2013, 672), (2014, 735), (2015, 808), (2016, 949), (2017, 1019), (2018, 1027)]
+2025-03-08 23:29:23,163 - INFO - Use pytorch device_name: cpu
+2025-03-08 23:29:23,163 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-08 23:29:23,166 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-08 23:29:24,297 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 23:29:24,465 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-08 23:29:24,630 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-08 23:29:24,797 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 23:29:25,008 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-08 23:29:25,188 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-08 23:29:25,982 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-08 23:29:26,237 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-08 23:29:26,410 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-08 23:29:26,615 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-08 23:29:26,981 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-08 23:29:26,981 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.367s]
+2025-03-08 23:29:32,699 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-08 23:29:32,699 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:5.717s]
+2025-03-08 23:29:35,400 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:29:35,712 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:29:35,719 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:29:35,719 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:29:35,720 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:29:36,439 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-08 23:29:37,143 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-08 23:29:37,236 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-08 23:29:37,431 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-H04L.html HTTP/1.1" 200 None
+2025-03-08 23:29:37,596 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y10T.html HTTP/1.1" 200 None
+2025-03-08 23:29:54,049 - INFO - Cumulative data for CPC code B64C: [(2005, 56), (2006, 110), (2007, 170), (2008, 225), (2009, 313), (2010, 430), (2011, 528), (2012, 626), (2013, 730), (2014, 848), (2015, 1007), (2016, 1231), (2017, 1339), (2018, 1350)]
+2025-03-08 23:29:54,115 - INFO - Cumulative data for CPC code B64D: [(2005, 71), (2006, 147), (2007, 212), (2008, 284), (2009, 365), (2010, 464), (2011, 567), (2012, 671), (2013, 775), (2014, 897), (2015, 1043), (2016, 1212), (2017, 1285), (2018, 1298)]
+2025-03-08 23:29:54,197 - INFO - Cumulative data for CPC code G01S: [(2005, 60), (2006, 158), (2007, 237), (2008, 342), (2009, 428), (2010, 506), (2011, 595), (2012, 679), (2013, 740), (2014, 811), (2015, 891), (2016, 956), (2017, 988), (2018, 992)]
+2025-03-08 23:29:54,273 - INFO - Cumulative data for CPC code Y10T: [(2005, 62), (2006, 124), (2007, 177), (2008, 253), (2009, 334), (2010, 449), (2011, 548), (2012, 650), (2013, 684), (2014, 692)]
+2025-03-08 23:29:54,350 - INFO - Cumulative data for CPC code H04L: [(2005, 31), (2006, 93), (2007, 133), (2008, 191), (2009, 245), (2010, 328), (2011, 377), (2012, 438), (2013, 486), (2014, 516), (2015, 569), (2016, 630), (2017, 661), (2018, 663)]
+2025-03-08 23:40:08,669 - INFO - Use pytorch device_name: cpu
+2025-03-08 23:40:08,669 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-08 23:40:08,673 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-08 23:40:09,863 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 23:40:10,068 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-08 23:40:10,580 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-08 23:40:10,784 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 23:40:10,989 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-08 23:40:11,199 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-08 23:40:11,609 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-08 23:40:12,223 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-08 23:40:12,531 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-08 23:40:12,748 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-08 23:40:13,140 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-08 23:40:13,140 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.392s]
+2025-03-08 23:40:43,955 - INFO - Use pytorch device_name: cpu
+2025-03-08 23:40:43,956 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-08 23:40:43,959 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-08 23:40:45,196 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 23:40:45,447 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-08 23:40:45,610 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-08 23:40:45,776 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 23:40:45,947 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-08 23:40:46,118 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-08 23:40:46,524 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-08 23:40:46,806 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-08 23:40:46,933 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-08 23:40:46,933 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:33.791s]
+2025-03-08 23:40:47,032 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-08 23:40:50,093 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-08 23:40:50,516 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-08 23:40:50,517 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.424s]
+2025-03-08 23:41:00,941 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-08 23:41:00,941 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:10.422s]
+2025-03-08 23:41:25,523 - INFO - Use pytorch device_name: cpu
+2025-03-08 23:41:25,524 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-08 23:41:25,743 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 23:41:26,153 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-08 23:41:26,358 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-08 23:41:26,570 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 23:41:26,752 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-08 23:41:26,973 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-08 23:41:27,382 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-08 23:41:27,693 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-08 23:41:27,898 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-08 23:41:28,102 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-08 23:41:28,610 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-08 23:41:28,610 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.509s]
+2025-03-08 23:41:33,741 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-08 23:41:33,741 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:5.128s]
+2025-03-08 23:41:37,484 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:41:37,489 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:41:37,789 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:41:37,790 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:41:37,793 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:41:38,965 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-08 23:41:39,006 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-08 23:41:39,147 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-08 23:41:39,209 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y10T.html HTTP/1.1" 200 None
+2025-03-08 23:41:39,579 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y02T.html HTTP/1.1" 200 9590
+2025-03-08 23:41:54,277 - INFO - Cumulative data for CPC code B64C: [(2005, 57), (2006, 120), (2007, 185), (2008, 259), (2009, 369), (2010, 491), (2011, 605), (2012, 723), (2013, 855), (2014, 970), (2015, 1136), (2016, 1317), (2017, 1412), (2018, 1419)]
+2025-03-08 23:41:54,363 - INFO - Cumulative data for CPC code Y10T: [(2005, 64), (2006, 150), (2007, 222), (2008, 290), (2009, 393), (2010, 504), (2011, 602), (2012, 715), (2013, 745), (2014, 748)]
+2025-03-08 23:41:54,464 - INFO - Cumulative data for CPC code G01S: [(2005, 84), (2006, 203), (2007, 315), (2008, 430), (2009, 562), (2010, 682), (2011, 802), (2012, 927), (2013, 1022), (2014, 1128), (2015, 1249), (2016, 1352), (2017, 1389), (2018, 1394)]
+2025-03-08 23:41:54,467 - INFO - Cumulative data for CPC code B64D: [(2005, 70), (2006, 145), (2007, 222), (2008, 300), (2009, 381), (2010, 466), (2011, 568), (2012, 661), (2013, 748), (2014, 849), (2015, 986), (2016, 1136), (2017, 1207), (2018, 1213)]
+2025-03-08 23:41:54,552 - INFO - Cumulative data for CPC code Y02T: [(2005, 43), (2006, 92), (2007, 141), (2008, 206), (2009, 291), (2010, 371), (2011, 451), (2012, 531), (2013, 564), (2014, 567), (2017, 570)]
+2025-03-08 23:43:58,175 - INFO - Use pytorch device_name: cpu
+2025-03-08 23:43:58,176 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-08 23:43:58,178 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-08 23:43:59,356 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 23:43:59,537 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-08 23:43:59,716 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-08 23:43:59,961 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 23:44:00,575 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-08 23:44:00,888 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-08 23:44:01,298 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-08 23:44:01,618 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-08 23:44:01,847 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-08 23:44:02,108 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-08 23:44:02,437 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-08 23:44:02,438 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.331s]
+2025-03-08 23:44:09,311 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-08 23:44:09,312 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:6.872s]
+2025-03-08 23:44:12,138 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:44:12,140 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:44:12,452 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:44:12,455 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:44:12,456 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:44:13,852 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y10T.html HTTP/1.1" 200 None
+2025-03-08 23:44:13,932 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y02T.html HTTP/1.1" 200 9590
+2025-03-08 23:44:14,079 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-08 23:44:14,157 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-08 23:44:14,188 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-08 23:44:30,807 - INFO - Cumulative data for CPC code B64C: [(2005, 57), (2006, 120), (2007, 185), (2008, 259), (2009, 369), (2010, 491), (2011, 605), (2012, 723), (2013, 855), (2014, 970), (2015, 1136), (2016, 1317), (2017, 1412), (2018, 1419)]
+2025-03-08 23:44:30,887 - INFO - Cumulative data for CPC code G01S: [(2005, 84), (2006, 203), (2007, 315), (2008, 430), (2009, 562), (2010, 682), (2011, 802), (2012, 927), (2013, 1022), (2014, 1128), (2015, 1249), (2016, 1352), (2017, 1389), (2018, 1394)]
+2025-03-08 23:44:30,965 - INFO - Cumulative data for CPC code B64D: [(2005, 70), (2006, 145), (2007, 222), (2008, 300), (2009, 381), (2010, 466), (2011, 568), (2012, 661), (2013, 748), (2014, 849), (2015, 986), (2016, 1136), (2017, 1207), (2018, 1213)]
+2025-03-08 23:44:31,042 - INFO - Cumulative data for CPC code Y10T: [(2005, 64), (2006, 150), (2007, 222), (2008, 290), (2009, 393), (2010, 504), (2011, 602), (2012, 715), (2013, 745), (2014, 748)]
+2025-03-08 23:44:31,124 - INFO - Cumulative data for CPC code Y02T: [(2005, 43), (2006, 92), (2007, 141), (2008, 206), (2009, 291), (2010, 371), (2011, 451), (2012, 531), (2013, 564), (2014, 567), (2017, 570)]
+2025-03-08 23:44:45,285 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:44:45,289 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:44:45,292 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:44:45,293 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:44:45,587 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:44:46,591 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-08 23:44:46,614 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-08 23:44:46,622 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-08 23:44:46,955 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y02T.html HTTP/1.1" 200 9590
+2025-03-08 23:44:47,095 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y10T.html HTTP/1.1" 200 None
+2025-03-08 23:45:06,570 - INFO - Cumulative data for CPC code B64C: [(2005, 57), (2006, 120), (2007, 185), (2008, 259), (2009, 369), (2010, 491), (2011, 605), (2012, 723), (2013, 855), (2014, 970), (2015, 1136), (2016, 1317), (2017, 1412), (2018, 1419)]
+2025-03-08 23:45:06,651 - INFO - Cumulative data for CPC code G01S: [(2005, 84), (2006, 203), (2007, 315), (2008, 430), (2009, 562), (2010, 682), (2011, 802), (2012, 927), (2013, 1022), (2014, 1128), (2015, 1249), (2016, 1352), (2017, 1389), (2018, 1394)]
+2025-03-08 23:45:06,720 - INFO - Cumulative data for CPC code B64D: [(2005, 70), (2006, 145), (2007, 222), (2008, 300), (2009, 381), (2010, 466), (2011, 568), (2012, 661), (2013, 748), (2014, 849), (2015, 986), (2016, 1136), (2017, 1207), (2018, 1213)]
+2025-03-08 23:45:06,807 - INFO - Cumulative data for CPC code Y10T: [(2005, 64), (2006, 150), (2007, 222), (2008, 290), (2009, 393), (2010, 504), (2011, 602), (2012, 715), (2013, 745), (2014, 748)]
+2025-03-08 23:45:06,901 - INFO - Cumulative data for CPC code Y02T: [(2005, 43), (2006, 92), (2007, 141), (2008, 206), (2009, 291), (2010, 371), (2011, 451), (2012, 531), (2013, 564), (2014, 567), (2017, 570)]
+2025-03-08 23:46:58,760 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:46:58,761 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:46:59,081 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:46:59,083 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:46:59,085 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:47:00,229 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-08 23:47:00,312 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-08 23:47:00,452 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y10T.html HTTP/1.1" 200 None
+2025-03-08 23:47:00,467 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-08 23:47:00,483 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y02T.html HTTP/1.1" 200 9590
+2025-03-08 23:47:15,777 - INFO - Cumulative data for CPC code B64C: [(2005, 57), (2006, 120), (2007, 185), (2008, 259), (2009, 369), (2010, 491), (2011, 605), (2012, 723), (2013, 855), (2014, 970), (2015, 1136), (2016, 1317), (2017, 1412), (2018, 1419)]
+2025-03-08 23:47:15,840 - INFO - Cumulative data for CPC code G01S: [(2005, 84), (2006, 203), (2007, 315), (2008, 430), (2009, 562), (2010, 682), (2011, 802), (2012, 927), (2013, 1022), (2014, 1128), (2015, 1249), (2016, 1352), (2017, 1389), (2018, 1394)]
+2025-03-08 23:47:15,904 - INFO - Cumulative data for CPC code B64D: [(2005, 70), (2006, 145), (2007, 222), (2008, 300), (2009, 381), (2010, 466), (2011, 568), (2012, 661), (2013, 748), (2014, 849), (2015, 986), (2016, 1136), (2017, 1207), (2018, 1213)]
+2025-03-08 23:47:15,971 - INFO - Cumulative data for CPC code Y10T: [(2005, 64), (2006, 150), (2007, 222), (2008, 290), (2009, 393), (2010, 504), (2011, 602), (2012, 715), (2013, 745), (2014, 748)]
+2025-03-08 23:47:16,050 - INFO - Cumulative data for CPC code Y02T: [(2005, 43), (2006, 92), (2007, 141), (2008, 206), (2009, 291), (2010, 371), (2011, 451), (2012, 531), (2013, 564), (2014, 567), (2017, 570)]
+2025-03-08 23:47:50,504 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:47:50,505 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:47:50,508 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:47:50,509 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:47:50,813 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:47:51,762 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y10T.html HTTP/1.1" 200 None
+2025-03-08 23:47:51,791 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-08 23:47:51,803 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-08 23:47:51,843 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-08 23:47:52,347 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y02T.html HTTP/1.1" 200 9590
+2025-03-08 23:48:07,298 - INFO - Cumulative data for CPC code B64C: [(2005, 57), (2006, 120), (2007, 185), (2008, 259), (2009, 369), (2010, 491), (2011, 605), (2012, 723), (2013, 855), (2014, 970), (2015, 1136), (2016, 1317), (2017, 1412), (2018, 1419)]
+2025-03-08 23:48:07,369 - INFO - Cumulative data for CPC code G01S: [(2005, 84), (2006, 203), (2007, 315), (2008, 430), (2009, 562), (2010, 682), (2011, 802), (2012, 927), (2013, 1022), (2014, 1128), (2015, 1249), (2016, 1352), (2017, 1389), (2018, 1394)]
+2025-03-08 23:48:07,437 - INFO - Cumulative data for CPC code B64D: [(2005, 70), (2006, 145), (2007, 222), (2008, 300), (2009, 381), (2010, 466), (2011, 568), (2012, 661), (2013, 748), (2014, 849), (2015, 986), (2016, 1136), (2017, 1207), (2018, 1213)]
+2025-03-08 23:48:07,531 - INFO - Cumulative data for CPC code Y10T: [(2005, 64), (2006, 150), (2007, 222), (2008, 290), (2009, 393), (2010, 504), (2011, 602), (2012, 715), (2013, 745), (2014, 748)]
+2025-03-08 23:48:07,604 - INFO - Cumulative data for CPC code Y02T: [(2005, 43), (2006, 92), (2007, 141), (2008, 206), (2009, 291), (2010, 371), (2011, 451), (2012, 531), (2013, 564), (2014, 567), (2017, 570)]
+2025-03-08 23:48:20,031 - INFO - Use pytorch device_name: cpu
+2025-03-08 23:48:20,031 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-08 23:48:20,034 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-08 23:48:21,045 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 23:48:21,291 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-08 23:48:21,464 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-08 23:48:21,648 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-08 23:48:21,812 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-08 23:48:21,978 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-08 23:48:22,264 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-08 23:48:22,568 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-08 23:48:22,740 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-08 23:48:22,934 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-08 23:48:23,241 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-08 23:48:23,241 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.309s]
+2025-03-08 23:48:33,171 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-08 23:48:33,171 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:9.927s]
+2025-03-08 23:48:36,104 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:48:36,108 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:48:36,110 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:48:36,412 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:48:36,414 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:48:37,680 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-08 23:48:37,702 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-08 23:48:37,718 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-08 23:48:38,124 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G08G.html HTTP/1.1" 200 17295
+2025-03-08 23:48:38,295 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01C.html HTTP/1.1" 200 23914
+2025-03-08 23:48:41,956 - INFO - Cumulative data for CPC code B64C: [(2005, 79), (2006, 164), (2007, 245), (2008, 340), (2009, 470), (2010, 642), (2011, 813), (2012, 998), (2013, 1165), (2014, 1364), (2015, 1612), (2016, 1948), (2017, 2105), (2018, 2121)]
+2025-03-08 23:48:42,029 - INFO - Cumulative data for CPC code B64D: [(2005, 90), (2006, 175), (2007, 247), (2008, 340), (2009, 465), (2010, 645), (2011, 776), (2012, 924), (2013, 1052), (2014, 1207), (2015, 1392), (2016, 1659), (2017, 1768), (2018, 1783)]
+2025-03-08 23:48:42,124 - INFO - Cumulative data for CPC code G01C: [(2005, 46), (2006, 101), (2007, 185), (2008, 270), (2009, 346), (2010, 459), (2011, 552), (2012, 642), (2013, 713), (2014, 783), (2015, 867), (2016, 947), (2017, 977), (2018, 979)]
+2025-03-08 23:48:42,129 - INFO - Cumulative data for CPC code G01S: [(2005, 58), (2006, 124), (2007, 208), (2008, 304), (2009, 409), (2010, 532), (2011, 651), (2012, 761), (2013, 851), (2014, 945), (2015, 1045), (2016, 1137), (2017, 1182), (2018, 1187)]
+2025-03-08 23:48:42,205 - INFO - Cumulative data for CPC code G08G: [(2005, 40), (2006, 73), (2007, 138), (2008, 219), (2009, 277), (2010, 389), (2011, 472), (2012, 541), (2013, 609), (2014, 668), (2015, 730), (2016, 862), (2017, 932), (2018, 939)]
+2025-03-08 23:51:57,426 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:51:57,427 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:51:57,734 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:51:57,737 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:51:57,739 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:51:58,857 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-08 23:51:58,893 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-08 23:51:59,602 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-08 23:51:59,603 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y10T.html HTTP/1.1" 200 None
+2025-03-08 23:51:59,664 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y02T.html HTTP/1.1" 200 9590
+2025-03-08 23:52:18,833 - INFO - Cumulative data for CPC code B64C: [(2005, 57), (2006, 120), (2007, 185), (2008, 259), (2009, 369), (2010, 491), (2011, 605), (2012, 723), (2013, 855), (2014, 970), (2015, 1136), (2016, 1317), (2017, 1412), (2018, 1419)]
+2025-03-08 23:52:18,905 - INFO - Cumulative data for CPC code G01S: [(2005, 84), (2006, 203), (2007, 315), (2008, 430), (2009, 562), (2010, 682), (2011, 802), (2012, 927), (2013, 1022), (2014, 1128), (2015, 1249), (2016, 1352), (2017, 1389), (2018, 1394)]
+2025-03-08 23:52:18,983 - INFO - Cumulative data for CPC code B64D: [(2005, 70), (2006, 145), (2007, 222), (2008, 300), (2009, 381), (2010, 466), (2011, 568), (2012, 661), (2013, 748), (2014, 849), (2015, 986), (2016, 1136), (2017, 1207), (2018, 1213)]
+2025-03-08 23:52:19,056 - INFO - Cumulative data for CPC code Y10T: [(2005, 64), (2006, 150), (2007, 222), (2008, 290), (2009, 393), (2010, 504), (2011, 602), (2012, 715), (2013, 745), (2014, 748)]
+2025-03-08 23:52:19,128 - INFO - Cumulative data for CPC code Y02T: [(2005, 43), (2006, 92), (2007, 141), (2008, 206), (2009, 291), (2010, 371), (2011, 451), (2012, 531), (2013, 564), (2014, 567), (2017, 570)]
+2025-03-08 23:54:54,516 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:54:54,517 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:54:54,821 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:54:54,824 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:54:54,826 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-08 23:54:56,018 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-08 23:54:56,019 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-08 23:54:56,256 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01C.html HTTP/1.1" 200 23914
+2025-03-08 23:54:56,442 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-08 23:54:56,475 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G08G.html HTTP/1.1" 200 17295
+2025-03-08 23:55:00,649 - INFO - Cumulative data for CPC code B64C: [(2005, 79), (2006, 164), (2007, 245), (2008, 340), (2009, 470), (2010, 642), (2011, 813), (2012, 998), (2013, 1165), (2014, 1364), (2015, 1612), (2016, 1948), (2017, 2105), (2018, 2121)]
+2025-03-08 23:55:00,764 - INFO - Cumulative data for CPC code G01S: [(2005, 58), (2006, 124), (2007, 208), (2008, 304), (2009, 409), (2010, 532), (2011, 651), (2012, 761), (2013, 851), (2014, 945), (2015, 1045), (2016, 1137), (2017, 1182), (2018, 1187)]
+2025-03-08 23:55:00,778 - INFO - Cumulative data for CPC code G08G: [(2005, 40), (2006, 73), (2007, 138), (2008, 219), (2009, 277), (2010, 389), (2011, 472), (2012, 541), (2013, 609), (2014, 668), (2015, 730), (2016, 862), (2017, 932), (2018, 939)]
+2025-03-08 23:55:00,935 - INFO - Cumulative data for CPC code B64D: [(2005, 90), (2006, 175), (2007, 247), (2008, 340), (2009, 465), (2010, 645), (2011, 776), (2012, 924), (2013, 1052), (2014, 1207), (2015, 1392), (2016, 1659), (2017, 1768), (2018, 1783)]
+2025-03-08 23:55:00,948 - INFO - Cumulative data for CPC code G01C: [(2005, 46), (2006, 101), (2007, 185), (2008, 270), (2009, 346), (2010, 459), (2011, 552), (2012, 642), (2013, 713), (2014, 783), (2015, 867), (2016, 947), (2017, 977), (2018, 979)]
+2025-03-09 00:31:01,315 - INFO - Use pytorch device_name: cpu
+2025-03-09 00:31:01,316 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-09 00:31:01,319 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-09 00:31:02,585 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-09 00:31:02,784 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-09 00:31:02,993 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-09 00:31:03,193 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-09 00:31:03,398 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-09 00:31:03,808 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-09 00:31:04,218 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-09 00:31:04,631 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-09 00:31:04,938 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-09 00:31:05,154 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-09 00:31:05,753 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-09 00:31:05,754 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.600s]
+2025-03-09 00:31:12,370 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-09 00:31:12,371 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:6.614s]
+2025-03-09 00:31:15,361 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-09 00:31:15,363 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-09 00:31:15,664 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-09 00:31:15,667 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-09 00:31:15,670 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-09 00:31:17,329 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-Y10T.html HTTP/1.1" 200 None
+2025-03-09 00:31:17,330 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-09 00:31:17,331 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-H04L.html HTTP/1.1" 200 None
+2025-03-09 00:31:17,397 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B41J.html HTTP/1.1" 200 53757
+2025-03-09 00:31:17,489 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-09 00:31:37,225 - INFO - Cumulative data for CPC code B64C: [(2005, 67), (2006, 134), (2007, 198), (2008, 270), (2009, 390), (2010, 545), (2011, 674), (2012, 816), (2013, 929), (2014, 1058), (2015, 1199), (2016, 1342), (2017, 1396), (2018, 1398)]
+2025-03-09 00:31:37,302 - INFO - Cumulative data for CPC code Y10T: [(2005, 70), (2006, 153), (2007, 244), (2008, 347), (2009, 462), (2010, 595), (2011, 717), (2012, 855), (2013, 903), (2014, 915)]
+2025-03-09 00:31:37,400 - INFO - Cumulative data for CPC code B41J: [(2005, 94), (2006, 191), (2007, 283), (2008, 355), (2009, 435), (2010, 504), (2011, 571), (2012, 645), (2013, 711), (2014, 771), (2015, 818), (2016, 851), (2017, 870)]
+2025-03-09 00:31:37,471 - INFO - Cumulative data for CPC code B64D: [(2005, 35), (2006, 75), (2007, 113), (2008, 170), (2009, 234), (2010, 309), (2011, 397), (2012, 466), (2013, 516), (2014, 572), (2015, 648), (2016, 735), (2017, 774), (2018, 778)]
+2025-03-09 00:31:37,562 - INFO - Cumulative data for CPC code H04L: [(2005, 44), (2006, 111), (2007, 167), (2008, 232), (2009, 278), (2010, 357), (2011, 421), (2012, 487), (2013, 555), (2014, 606), (2015, 679), (2016, 738), (2017, 758), (2018, 759)]
+2025-03-10 00:15:38,028 - INFO - Use pytorch device_name: cpu
+2025-03-10 00:15:38,028 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-10 00:15:38,034 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-10 00:15:39,073 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-10 00:15:39,261 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-10 00:15:39,429 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-10 00:15:39,640 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-10 00:15:39,810 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-10 00:15:40,002 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-10 00:15:41,052 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-10 00:15:41,345 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-10 00:15:41,529 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-10 00:15:43,181 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-10 00:15:43,625 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-10 00:15:43,625 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.444s]
+2025-03-10 00:15:53,093 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-10 00:15:53,093 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:9.465s]
+2025-03-10 00:15:56,659 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-10 00:15:56,662 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-10 00:15:56,953 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-10 00:15:56,954 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-10 00:15:56,964 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-10 00:15:58,390 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G05D.html HTTP/1.1" 200 41059
+2025-03-10 00:15:58,392 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-10 00:15:58,538 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-10 00:15:58,759 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G08G.html HTTP/1.1" 200 17295
+2025-03-10 00:15:58,760 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-10 00:16:02,826 - INFO - Cumulative data for CPC code B64C: [(2005, 90), (2006, 186), (2007, 275), (2008, 382), (2009, 521), (2010, 711), (2011, 893), (2012, 1100), (2013, 1282), (2014, 1486), (2015, 1749), (2016, 2109), (2017, 2270), (2018, 2288)]
+2025-03-10 00:16:02,985 - INFO - Cumulative data for CPC code G08G: [(2005, 40), (2006, 75), (2007, 149), (2008, 233), (2009, 301), (2010, 423), (2011, 513), (2012, 594), (2013, 672), (2014, 735), (2015, 808), (2016, 949), (2017, 1019), (2018, 1027)]
+2025-03-10 00:16:02,989 - INFO - Cumulative data for CPC code G05D: [(2005, 38), (2006, 69), (2007, 129), (2008, 199), (2009, 263), (2010, 355), (2011, 441), (2012, 525), (2013, 575), (2014, 601), (2015, 693), (2016, 855), (2017, 945), (2018, 958)]
+2025-03-10 00:16:03,519 - INFO - Cumulative data for CPC code G01S: [(2005, 53), (2006, 112), (2007, 195), (2008, 290), (2009, 386), (2010, 488), (2011, 601), (2012, 698), (2013, 779), (2014, 859), (2015, 952), (2016, 1042), (2017, 1086), (2018, 1091)]
+2025-03-10 00:16:03,604 - INFO - Cumulative data for CPC code B64D: [(2005, 81), (2006, 164), (2007, 248), (2008, 345), (2009, 474), (2010, 653), (2011, 800), (2012, 960), (2013, 1101), (2014, 1264), (2015, 1468), (2016, 1748), (2017, 1867), (2018, 1885)]
+2025-03-10 00:18:23,181 - INFO - Use pytorch device_name: cpu
+2025-03-10 00:18:23,181 - INFO - Load pretrained SentenceTransformer: all-mpnet-base-v2
+2025-03-10 00:18:23,184 - DEBUG - Starting new HTTPS connection (1): huggingface.co:443
+2025-03-10 00:18:24,220 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-10 00:18:24,440 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config_sentence_transformers.json HTTP/1.1" 200 0
+2025-03-10 00:18:24,652 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/README.md HTTP/1.1" 200 0
+2025-03-10 00:18:24,862 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/modules.json HTTP/1.1" 200 0
+2025-03-10 00:18:25,055 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/sentence_bert_config.json HTTP/1.1" 200 0
+2025-03-10 00:18:25,259 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/config.json HTTP/1.1" 200 0
+2025-03-10 00:18:25,668 - DEBUG - https://huggingface.co:443 "HEAD /sentence-transformers/all-mpnet-base-v2/resolve/main/tokenizer_config.json HTTP/1.1" 200 0
+2025-03-10 00:18:25,979 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2/revision/main HTTP/1.1" 200 6780
+2025-03-10 00:18:26,185 - DEBUG - https://huggingface.co:443 "GET /api/models/sentence-transformers/all-mpnet-base-v2 HTTP/1.1" 200 6780
+2025-03-10 00:18:26,373 - DEBUG - Starting new HTTP connection (1): 44.210.142.78:9200
+2025-03-10 00:18:26,795 - DEBUG - http://44.210.142.78:9200 "HEAD / HTTP/1.1" 200 0
+2025-03-10 00:18:26,796 - INFO - HEAD http://44.210.142.78:9200/ [status:200 duration:0.423s]
+2025-03-10 00:18:33,743 - DEBUG - http://44.210.142.78:9200 "POST /aerospace_index/_knn_search HTTP/1.1" 200 None
+2025-03-10 00:18:33,744 - INFO - POST http://44.210.142.78:9200/aerospace_index/_knn_search [status:200 duration:6.947s]
+2025-03-10 00:18:36,653 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-10 00:18:36,655 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-10 00:18:36,973 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-10 00:18:36,976 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-10 00:18:36,977 - DEBUG - Starting new HTTPS connection (1): www.uspto.gov:443
+2025-03-10 00:18:38,268 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G05D.html HTTP/1.1" 200 41059
+2025-03-10 00:18:38,271 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64C.html HTTP/1.1" 200 30461
+2025-03-10 00:18:38,315 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G01S.html HTTP/1.1" 200 57203
+2025-03-10 00:18:38,315 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-B64D.html HTTP/1.1" 200 24567
+2025-03-10 00:18:38,330 - DEBUG - https://www.uspto.gov:443 "GET /web/patents/classification/cpc/html/cpc-G08G.html HTTP/1.1" 200 17295
+2025-03-10 00:18:42,502 - INFO - Cumulative data for CPC code B64C: [(2005, 90), (2006, 186), (2007, 275), (2008, 382), (2009, 521), (2010, 711), (2011, 893), (2012, 1100), (2013, 1282), (2014, 1486), (2015, 1749), (2016, 2109), (2017, 2270), (2018, 2288)]
+2025-03-10 00:18:42,556 - INFO - Cumulative data for CPC code B64D: [(2005, 81), (2006, 164), (2007, 248), (2008, 345), (2009, 474), (2010, 653), (2011, 800), (2012, 960), (2013, 1101), (2014, 1264), (2015, 1468), (2016, 1748), (2017, 1867), (2018, 1885)]
+2025-03-10 00:18:42,678 - INFO - Cumulative data for CPC code G01S: [(2005, 53), (2006, 112), (2007, 195), (2008, 290), (2009, 386), (2010, 488), (2011, 601), (2012, 698), (2013, 779), (2014, 859), (2015, 952), (2016, 1042), (2017, 1086), (2018, 1091)]
+2025-03-10 00:18:42,689 - INFO - Cumulative data for CPC code G05D: [(2005, 38), (2006, 69), (2007, 129), (2008, 199), (2009, 263), (2010, 355), (2011, 441), (2012, 525), (2013, 575), (2014, 601), (2015, 693), (2016, 855), (2017, 945), (2018, 958)]
+2025-03-10 00:18:42,757 - INFO - Cumulative data for CPC code G08G: [(2005, 40), (2006, 75), (2007, 149), (2008, 233), (2009, 301), (2010, 423), (2011, 513), (2012, 594), (2013, 672), (2014, 735), (2015, 808), (2016, 949), (2017, 1019), (2018, 1027)]
