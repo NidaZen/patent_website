@@ -3,6 +3,7 @@ import "../design/Home.css";
 import logo from "../assets/images.png";
 import { Search } from "lucide-react";  
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ReferenceLine } from "recharts";
+import axios from "axios";
 
 function Home() {
   const [inputQuery, setInputQuery] = useState("");
@@ -27,6 +28,27 @@ function Home() {
     return response.json();
   };
 
+  const translate = async (text) => {
+    try {
+      const response = await axios.post(
+        `https://translation.googleapis.com/language/translate/v2`,
+        null,
+        {
+          params: {
+            key: process.env.REACT_APP_GOOGLE_API_KEY,
+            q: text,
+            target: "en",
+          },
+        }
+      );
+      return response.data.data.translations[0].translatedText;
+    } catch (err) {
+      console.error("Çeviri hatası:", err);
+      setError("Çeviri sırasında bir hata oluştu.");
+      return text;
+    }
+  };
+
   const handleSearch = async () => {
     setError("");
     setResults([]);
@@ -43,10 +65,13 @@ function Home() {
     setLoading(true);
 
     try {
-      const searchData = await fetchData(`http://localhost:8000/search?search_query=${inputQuery}`);
+      //  Arama sorgusunu İngilizceye çevir
+      const translatedQuery = await translate(inputQuery);
+
+      const searchData = await fetchData(`http://localhost:8000/search?search_query=${translatedQuery}`);
       setResults(searchData.filtered_hits || []);
 
-      const cpcData = await fetchData(`http://localhost:8000/top-cpc-codes?search_query=${inputQuery}`);
+      const cpcData = await fetchData(`http://localhost:8000/top-cpc-codes?search_query=${translatedQuery}`);
       setCpcCodes(cpcData);
 
       const titlePromises = cpcData.map(async ([cpcCode]) => {
@@ -62,7 +87,7 @@ function Home() {
       setCpcTitles(titleMap);
 
       const scurvePromises = cpcData.map(async ([cpcCode]) => {
-        const data = await fetchData(`http://localhost:8000/predict-s-curve?search_query=${inputQuery}&cpc_code=${cpcCode}`);
+        const data = await fetchData(`http://localhost:8000/predict-s-curve?search_query=${translatedQuery}&cpc_code=${cpcCode}`);
         return { cpcCode, data };
       });
 
@@ -105,7 +130,6 @@ function Home() {
       value: item[1]
     }));
   };
-
   return (
     <div className="home-container">
       <header className="top-bar">
@@ -141,7 +165,7 @@ function Home() {
         <div className="scurve-graphs">
           {Object.keys(sCurveData).length > 0 && (
             <div>
-              <h2 class="scurve-title">S-Curve Tahminleri</h2>
+              <h2 class="scurve-title">Teknoloji Olgunluk S-Curve Grafikleri</h2>
               <div className="graphs-container">
                 {Object.entries(sCurveData).map(([cpcCode, data], index) => (
                   <div key={index} className="graph">
